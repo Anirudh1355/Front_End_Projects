@@ -2,6 +2,9 @@ let boxes=document.querySelectorAll(".btn");
 let reset= document.querySelector("#reset-btn");
 let declare=document.querySelector(".declare");
 declare.classList.remove("declare");
+let turnO=true;
+let count=0;
+
 const reset_game=()=>
 {
     for (const box of boxes) {
@@ -15,11 +18,13 @@ const reset_game=()=>
     });
     declare.classList.remove("declare");
     document.querySelector("h1").innerHTML="Tic Tac Toe";
+    count=0;
 }
 reset_game();
-let turnO=true;
+
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
+        count++;
         if(turnO)
         {
             box.innerText="O";
@@ -53,6 +58,10 @@ const checkwinner = () =>
                     box.disabled=true;
                 }
                 show_winner(posval1);
+            }
+            else if(count===9)
+            {
+                document.querySelector("h1").innerHTML="Draw";
             }
         }
     }
