@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <link rel="stylesheet" href="RockPaperScissors.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style>
+        h1{
+            font-family: "Audiowide", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Rock Paper Scissor</h1>
+    <div id="choice-section">
+        <div class="choice"id="rock">
+            <img src="rock.png" alt="Rock">
+        </div>
+        <div class="choice" id="paper">
+            <img src="paper.png" alt="Paper">
+        </div>
+        <div class="choice" id="scissor">
+            <img src="scissors.png" alt="Scissor">
+        </div>
+    </div>
+    <div id="score-board">
+        <div  id="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>                
+        <div id="score">
+            <p id="comp-score">0</p>
+            <p>Computer</p> 
+        </div>
+    </div>
+    <div id="msg-container">
+        <p id="msg">Select your choice</p>
+    </div>
+    <script src="RockPaperScissors.js"></script>
+</body>
+</html>
